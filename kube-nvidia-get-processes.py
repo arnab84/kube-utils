@@ -445,7 +445,7 @@ def main():
                                            gpu_index, gpu_uuid, gpu_serial,
                                            temperature, utilization)
                         for container_process in gpu_container.processes:
-                            if container_process.host_pid == host_pid:
+                            if container_process.pid == host_pid:
                                 if gpu_info not in container_process.gpu_infos:
                                     container_process.gpu_infos.append(gpu_info)
 
